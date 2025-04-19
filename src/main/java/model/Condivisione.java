@@ -1,8 +1,10 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Condivisione {
     private String autore;
-    private String partecipanti;
+    private ArrayList<Utente> partecipanti;
 
     //gestisco la relazione con utente
     private Utente utente;
