@@ -8,7 +8,7 @@ public class Utente {
     private List<Condivisione> condivisione;
     private List<ToDo> ToDo;
     private List<Bacheca> bacheca;
-
+    //costruttore
     public Utente(String login, String password, List<Condivisione> condivisione, List<Bacheca> bacheca, List<ToDo> ToDo, List<ToDo> toDo){
         this.login = login;
         this.password = password;

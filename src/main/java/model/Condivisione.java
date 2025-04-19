@@ -7,7 +7,7 @@ public class Condivisione {
     private List<Utente> partecipanti;
     private ToDo todo;
 
-
+    //costruttore
     public Condivisione(String autore, ArrayList<Utente> partecipanti, Utente utente, ToDo todo) {
         this.autore = autore;
         this.partecipanti = new ArrayList<>();

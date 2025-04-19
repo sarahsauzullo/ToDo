@@ -9,7 +9,7 @@ public class Bacheca {
     private String descrizione;
     private List <Utente> utente;
     private List <ToDo> ToDo;
-
+    //costruttore
     public Bacheca(TitoloBacheca titolo, String descrizione, List<Utente> utente,List<ToDo> todo){
         this.titolo = titolo;
         this.descrizione = descrizione;

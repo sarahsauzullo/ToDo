@@ -4,7 +4,7 @@ public class Attivita {
     private String titolo;
     private StatoAttivita stato=StatoAttivita.NONCOMPLETATA;
 
-
+    //costruttore
     public Attivita(String titolo, StatoAttivita stato){
         this.titolo = titolo;
         this.stato = stato;

@@ -5,7 +5,7 @@ import java.util.*;
 public class CheckList {
     private List<Attivita> attivita;
     private ToDo todo;
-
+    //costruttore
     public CheckList(ToDo todo){
         this.todo = todo;
         this.attivita = new ArrayList<>();

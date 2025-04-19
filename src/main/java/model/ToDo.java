@@ -18,7 +18,7 @@ public class ToDo {
 
     private List<Condivisione> condivisione;
     private CheckList checklist;
-
+    //costruttore
     public ToDo(String titolo, String scadenza, String link, String url, String descrizione, Image immagine,
                 String coloresfondo, ArrayList <Condivisione> condivisione, StatoToDo stato, String posizione, Bacheca bacheca){
         this.titolo = titolo;
