@@ -2,9 +2,9 @@ package model;
 
 public class Attivita {
     private String titolo;
-    private StatoAttivita stato;
+    private StatoAttivita stato=StatoAttivita.NONCOMPLETATA;
 
-    //Checklist null
+
     public Attivita(String titolo, StatoAttivita stato){
         this.titolo = titolo;
         this.stato = stato;
