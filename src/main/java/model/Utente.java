@@ -1,48 +1,95 @@
 package model;
 
-import java.util.ArrayList;
+import java.util.*;
 
-/**
- * The type Utente.
- */
 public class Utente {
-    private final String login;
+    private String login;
     private String password;
+    private List<Condivisione> condivisione;
+    private List<ToDo> ToDo;
+    private List<Bacheca> bacheca;
 
-
-    //serve a gestire la relazione 3..* con Bacheca
-    private ArrayList<Bacheca> bacheca = new ArrayList<Bacheca>();
-    public Utente(Bacheca b1, Bacheca b2, Bacheca b3){
+    public Utente(String login, String password, List<Condivisione> condivisione, List<Bacheca> bacheca, List<ToDo> ToDo, List<ToDo> toDo){
+        this.login = login;
+        this.password = password;
+        this.ToDo = toDo;
+        this.condivisione = new ArrayList<>();
+        this.bacheca = new ArrayList<>();
     }
 
+    public void CreaBacheca(Bacheca bacheca) {
+    }
 
-    //in questo modo gestisco la relazione * con Condivisione
-    private ArrayList<Condivisione> condivisione = new ArrayList<Condivisione>();
+    public void ModificaBacheca(Bacheca bacheca) {
+    }
 
+    public void EliminaBacheca(Bacheca bacheca) {
 
-    //costruttore
-    public Utente(String login, String password) {
+    }
+
+    public void LeggereUtenti(ToDo todo){
+
+    }
+
+    public void ModificaSfondo(ToDo todo){
+
+    }
+
+    public void RicercaToDo(ToDo todo){
+
+    }
+    public void CreaToDo(ToDo todo){
+
+    }
+    public void ModificaToDo(ToDo todo){
+
+    }
+    public void SpostaToDo(ToDo todo){
+
+    }
+    public void OrdinaTodo(ToDo todo){
+
+    }
+    public void ToDoInScadenza(ToDo todo){
+
+    }
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
         this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
         this.password = password;
     }
 
+    public List<Condivisione> getCondivisione() {
+        return condivisione;
+    }
 
-    //funzioni future
-    public void CreaToDo(){}
-    public void ModificaToDo(){}
-    public void EliminaToDo(){}
-    public void SpostaToDo(){}
-    public void OrdinaToDo(){}
-    public void LeggiUtenti(){}
-    public void RicercaToDo(){}
-    public void ToDoInScadenza(){}
-    public void CreaBacheca(){}
-    public void ModificaBacheca(){}
-    public void EliminaBacheca(){}
-    public void ModificaSfondo(){}
+    public void setCondivisione(List<Condivisione> condivisione) {
+        this.condivisione = condivisione;
+    }
 
+    public List<Bacheca> getBacheca() {
+        return bacheca;
+    }
 
-    public String getLogin() {
-        return login;
+    public void setBacheca(List<Bacheca> bacheca) {
+        this.bacheca = bacheca;
+    }
+
+    public List<ToDo> getToDo() {
+        return ToDo;
+    }
+
+    public void setToDo(List<ToDo> toDo) {
+        ToDo = toDo;
     }
 }

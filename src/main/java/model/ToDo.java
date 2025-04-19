@@ -1,46 +1,41 @@
 package model;
 
-import java.awt.font.ImageGraphicAttribute;
-import java.util.ArrayList;
-import java.util.Date;
+import java.awt.*;
+import java.util.*;
+import java.util.List;
 
 public class ToDo {
     private String titolo;
-    private String descrizione;
-    private Date datascadenza;
+    private String scadenza;
+    private String link;
     private String url;
-    private ImageGraphicAttribute image;
-    private String posizione;
+    private String descrizione;
+    private Image immagine;
     private String coloresfondo;
+    private StatoToDo stato= StatoToDo.NONCOMPLETATO;
+    private String Posizione;
+    private Bacheca bacheca;
 
-
-    //gestisco l'enumerazione
-    private StatoToDo stato = StatoToDo.NONCOMPLETATO;
-
-
-    //gestisco la relazione * con condivisione
-    private ArrayList <Condivisione> condivisione = new ArrayList<Condivisione>();
-
-
-    //gestisco la checklist
+    private List<Condivisione> condivisione;
     private CheckList checklist;
 
-    //gestisco la composizione con bacheca
-    private Bacheca bacheca;
-    public ToDo(Bacheca b){
-        bacheca = b;
+    public ToDo(String titolo, String scadenza, String link, String url, String descrizione, Image immagine,
+                String coloresfondo, ArrayList <Condivisione> condivisione, StatoToDo stato, String posizione, Bacheca bacheca){
+        this.titolo = titolo;
+        this.scadenza = scadenza;
+        this.link = link;
+        this.url = url;
+        this.descrizione = descrizione;
+        this.immagine = immagine;
+        this.coloresfondo = coloresfondo;
+        this.stato = stato;
+        this.Posizione = posizione;
+        this.bacheca = bacheca;
+
+        this.condivisione=new ArrayList<>();
+        this.checklist= checklist;
     }
 
-    //costruttore
-    public ToDo(String titolo, String descrizione, Date date, String url, ImageGraphicAttribute img, String posizione, String coloresfondo){
-        this.titolo = titolo;
-        this.descrizione = descrizione;
-        this.datascadenza = date;
-        this.url = url;
-        this.image = img;
-        this.posizione = posizione;
-        this.coloresfondo = coloresfondo;
-    }
 
     public String getTitolo() {
         return titolo;
@@ -50,20 +45,20 @@ public class ToDo {
         this.titolo = titolo;
     }
 
-    public String getDescrizione() {
-        return descrizione;
+    public String getScadenza() {
+        return scadenza;
     }
 
-    public void setDescrizione(String descrizione) {
-        this.descrizione = descrizione;
+    public void setScadenza(String scadenza) {
+        this.scadenza = scadenza;
     }
 
-    public Date getDatascadenza() {
-        return datascadenza;
+    public String getLink() {
+        return link;
     }
 
-    public void setDatascadenza(Date datascadenza) {
-        this.datascadenza = datascadenza;
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public String getUrl() {
@@ -74,20 +69,20 @@ public class ToDo {
         this.url = url;
     }
 
-    public ImageGraphicAttribute getImage() {
-        return image;
+    public String getDescrizione() {
+        return descrizione;
     }
 
-    public void setImage(ImageGraphicAttribute image) {
-        this.image = image;
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
     }
 
-    public String getPosizione() {
-        return posizione;
+    public Image getImmagine() {
+        return immagine;
     }
 
-    public void setPosizione(String posizione) {
-        this.posizione = posizione;
+    public void setImmagine(Image immagine) {
+        this.immagine = immagine;
     }
 
     public String getColoresfondo() {
@@ -96,5 +91,47 @@ public class ToDo {
 
     public void setColoresfondo(String coloresfondo) {
         this.coloresfondo = coloresfondo;
+    }
+
+
+    public CheckList getChecklist() {
+        return checklist;
+    }
+
+    public void setChecklist(CheckList checklist) {
+        this.checklist = checklist;
+    }
+
+    public List<Condivisione> getCondivisione() {
+        return condivisione;
+    }
+
+    public void setCondivisione(List<Condivisione> condivisione) {
+        this.condivisione = condivisione;
+    }
+
+    public String getPosizione() {
+        return Posizione;
+    }
+
+    public void setPosizione(String posizione) {
+        Posizione = posizione;
+    }
+
+    public StatoToDo getStato() {
+        return stato;
+    }
+
+    public void setStato(StatoToDo stato) {
+        this.stato = stato;
+    }
+
+
+    public Bacheca getBacheca() {
+        return bacheca;
+    }
+
+    public void setBacheca(Bacheca bacheca) {
+        this.bacheca = bacheca;
     }
 }

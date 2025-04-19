@@ -1,15 +1,42 @@
 package model;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class CheckList {
-    //gestisco relazioen con todo
+    private List<Attivita> attivita;
     private ToDo todo;
-    public CheckList(ToDo t){
-        todo = t;
-        t.checklist = this;
+
+    public CheckList(ToDo todo){
+        this.todo = todo;
+        this.attivita = new ArrayList<>();
+    }
+    public CheckList(ArrayList<Attivita> attivita, ToDo todo){
+        this.todo = todo;
+        this.attivita=new ArrayList<>();
+
     }
 
-    //gestisco aggregazione con attivita
-    private ArrayList<Attivita> attivita = new ArrayList<Attivita>();
+    private void AggiungiAttivita(Attivita attivita){
+
+    }
+
+    private void RimuoviAttivita(Attivita attivita){
+
+    }
+
+    public List<Attivita> getAttivita() {
+        return attivita;
+    }
+
+    public void setAttivita(List<Attivita> attivita) {
+        this.attivita = attivita;
+    }
+
+    public ToDo getTodo() {
+        return todo;
+    }
+
+    public void setTodo(ToDo todo) {
+        this.todo = todo;
+    }
 }

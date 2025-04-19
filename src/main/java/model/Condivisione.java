@@ -1,32 +1,18 @@
 package model;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Condivisione {
     private String autore;
-    private ArrayList<Utente> partecipanti;
-
-    //gestisco la relazione con utente
-    private Utente utente;
-    public Condivisione (Utente u) {
-        utente = u;
-    }
-
-    //gestisco la relazione con todo
+    private List<Utente> partecipanti;
     private ToDo todo;
-    private Condivisione (ToDo t) {
-        todo=t;
-    }
 
-    //costruttore
-    public Condivisione (String autore, String partecipanti) {
+
+    public Condivisione(String autore, ArrayList<Utente> partecipanti, Utente utente, ToDo todo) {
         this.autore = autore;
-        this.partecipanti = partecipanti;
+        this.partecipanti = new ArrayList<>();
+        this.todo = todo;
     }
-
-    //funzioni future
-    public void AggiungiCondivisioni(){}
-    public void EliminaCondivisione(){}
 
     public String getAutore() {
         return autore;
@@ -36,11 +22,24 @@ public class Condivisione {
         this.autore = autore;
     }
 
-    public String getPartecipanti() {
+    public List<Utente> getPartecipanti() {
         return partecipanti;
     }
 
-    public void setPartecipanti(String partecipanti) {
+    public void setPartecipanti(List<Utente> partecipanti) {
         this.partecipanti = partecipanti;
+    }
+
+    public void AggiungiCondivisione(){
+
+    }
+    public void EliminaCondivisione(){}
+
+    public ToDo getTodo() {
+        return todo;
+    }
+
+    public void setTodo(ToDo todo) {
+        this.todo = todo;
     }
 }
